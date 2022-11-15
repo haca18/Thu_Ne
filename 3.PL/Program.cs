@@ -17,7 +17,7 @@ namespace _3.PL
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());ton12112003
+            //Application.Run(new Form1());ton121120034
         }
     }
 }
