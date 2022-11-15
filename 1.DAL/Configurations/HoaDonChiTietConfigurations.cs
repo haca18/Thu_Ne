@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.Configurations
 {
-    internal interface HoaDonChiTietConfigurations : IEntityTypeConfiguration<HoaDonChiTiet>
+    internal class HoaDonChiTietConfigurations : IEntityTypeConfiguration<HoaDonChiTiet>
     {
         public void Configure(EntityTypeBuilder<HoaDonChiTiet> builder)
         {
@@ -24,13 +24,13 @@ namespace _1.DAL.Configurations
             builder.Property(p => p.MaHoaDonChiTiet).HasColumnName("MaHoaDon").
                HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.DonGia).HasColumnName("DonGia").
-               HasColumnType("double").IsRequired(); // nvarchar(100) not null
+               HasColumnType("float").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.SoLuong).HasColumnName("SoLuong").
                HasColumnType("int").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.GiamGia).HasColumnName("GiamGia").
-               HasColumnType("double").IsRequired(); // nvarchar(100) not null
+               HasColumnType("float").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.ThanhTien).HasColumnName("ThanhTien").
-               HasColumnType("double").IsRequired(); // nvarchar(100) not null
+               HasColumnType("float").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.GhiChu).HasColumnName("ChiChu").
                HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
             // Set khóa ngoại

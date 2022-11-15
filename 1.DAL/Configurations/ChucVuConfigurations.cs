@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.Configurations
 {
-    internal interface ChucVuConfigurations: IEntityTypeConfiguration<ChucVu>
+    internal class ChucVuConfigurations : IEntityTypeConfiguration<ChucVu>
     {
         public void Configure(EntityTypeBuilder<ChucVu> builder)
         {

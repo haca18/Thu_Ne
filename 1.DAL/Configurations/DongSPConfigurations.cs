@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.Configurations
 {
-    internal interface DongSPConfigurations : IEntityTypeConfiguration<DongSP>
+    internal class DongSPConfigurations : IEntityTypeConfiguration<DongSP>
     {
         public void Configure(EntityTypeBuilder<DongSP> builder)
         {

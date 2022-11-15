@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.Configurations
 {
-    internal interface ChatLieuConfigurations: IEntityTypeConfiguration<ChatLieu>
+    internal class ChatLieuConfigurations: IEntityTypeConfiguration<ChatLieu>
     {
         public void Configure(EntityTypeBuilder<ChatLieu> builder)
         {

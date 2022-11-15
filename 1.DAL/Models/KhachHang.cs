@@ -26,7 +26,7 @@ namespace _1.DAL.Models
         [StringLength(50)]
         public string SoDienThoai { get; set; }
         public bool? TrangThai { get; set; }
-        [Column("IDDiemTieuDung")]
+       
         public double? diemTieuDung { get; set; }
        
 

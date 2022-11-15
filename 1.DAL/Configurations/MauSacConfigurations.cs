@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.Configurations
 {
-    internal interface MauSacConfigurations : IEntityTypeConfiguration<MauSac>
+    internal class MauSacConfigurations : IEntityTypeConfiguration<MauSac>
     {
         public void Configure(EntityTypeBuilder<MauSac> builder)
         {
-            builder.ToTable("Nsx"); // Đặt tên bảng (Nếu ko thì lấy mặc định của class)
+            builder.ToTable("MauSac"); // Đặt tên bảng (Nếu ko thì lấy mặc định của class)
             builder.HasKey(x => x.Id); // Set khóa chính
             // Cấu hình dữ liệu
             builder.Property(p => p.Ten).HasColumnName("Ten").

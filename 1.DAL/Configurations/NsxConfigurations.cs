@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _1.DAL
+namespace _1.DAL.Configurations
 {
-    internal interface NsxConfigurations : IEntityTypeConfiguration<NSX>
+    internal class NsxConfigurations : IEntityTypeConfiguration<NSX>
     {
         public void Configure(EntityTypeBuilder<NSX> builder)
         {

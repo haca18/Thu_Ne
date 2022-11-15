@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.Configurations
 {
-    internal interface HoaDonConfigurations: IEntityTypeConfiguration<HoaDon>
+    internal class HoaDonConfigurations : IEntityTypeConfiguration<HoaDon>
     {
         public void Configure(EntityTypeBuilder<HoaDon> builder)
         {
@@ -29,13 +29,13 @@ namespace _1.DAL.Configurations
             builder.Property(p => p.NgayNhanHang).HasColumnName("NgayNhan").
                 HasColumnType("dateTime"); // varchar(100) not null
             builder.Property(p => p.NguoiBan).HasColumnName("NguoiBan").
-                HasColumnType("dateTime"); // varchar(100) not null
+                HasColumnType("nvarchar(20)"); // varchar(100) not null
             builder.Property(p => p.Sdt).HasColumnName("SdtKhach").
-                HasColumnType("dateTime"); // varchar(100) not null
+                HasColumnType("varchar(10)"); // varchar(100) not null
             builder.Property(k => k.IdNhanVien).IsRequired();
             //khoa phu
             builder.HasOne(x => x.KhachHang)
-            .WithMany().HasForeignKey(p => p.Sdt);
+            .WithMany().HasForeignKey(p => p.IdKhachHang);
             builder.HasOne(x => x.NhanVien)
             .WithMany().HasForeignKey(p => p.IdNhanVien);
 

@@ -21,6 +21,7 @@ namespace _1.DAL.Models
             
        
         public Guid? IdNhanVien { get; set; }
+        public Guid? IdKhachHang { get; set; }
         public int? TrangThai { get; set; }        
         public DateTime? NgayShipHang { get; set; }
         public string NguoiBan { get; set; }

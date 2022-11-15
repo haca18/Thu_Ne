@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.Configurations
 {
-    internal interface GioHangConfigurations:IEntityTypeConfiguration<GioHang>
+    internal class GioHangConfigurations :IEntityTypeConfiguration<GioHang>
     {
         public void Configure(EntityTypeBuilder<GioHang> builder)
         {
@@ -33,7 +33,7 @@ namespace _1.DAL.Configurations
             builder.HasOne(x => x.NhanVien)
            .WithMany().HasForeignKey(p => p.IdNV);
             builder.HasOne(x => x.KhachHang)
-            .WithMany().HasForeignKey(p => p.Sdt);
+            .WithMany().HasForeignKey(p => p.Id);
 
         }
     }

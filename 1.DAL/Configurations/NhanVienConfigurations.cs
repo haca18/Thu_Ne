@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.Configurations
 {
-    internal interface NhanVienConfigurations : IEntityTypeConfiguration<NhanVien>
+    internal class NhanVienConfigurations : IEntityTypeConfiguration<NhanVien>
     {
         public void Configure(EntityTypeBuilder<NhanVien> builder)
         {
@@ -37,7 +37,7 @@ namespace _1.DAL.Configurations
             builder.HasOne(x => x.NhanVien1)
           .WithMany().HasForeignKey(p => p.IdBc);
             builder.HasOne(x => x.ChucVu)
-          .WithMany().HasForeignKey(p => p.ChucVu);
+          .WithMany().HasForeignKey(p => p.IdChucVu);
 
 
 

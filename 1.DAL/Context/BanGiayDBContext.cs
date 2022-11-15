@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using _1.DAL.Configurations;
+using _1.DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,12 +25,13 @@ namespace _1.DAL.Context
         {
             // Thực hiện các ràng buộc kết nối
             base.OnConfiguring(optionsBuilder.
-                UseSqlServer("Data Source=DESKTOP-OJ4UDNH\\SQLEXPRESS;Initial Catalog=DuanMau_;" +
+                UseSqlServer("Data Source=DESKTOP-OJ4UDNH\\SQLEXPRESS;Initial Catalog=DuanMau_Giay;" +
                 "Persist Security Info=True;User ID=Nbton03;Password=123"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new SanPhamConfigurations());
             // Apply cac config cho cac model
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             // Phương thức này sẽ áp dụng tất cả các config hiện có

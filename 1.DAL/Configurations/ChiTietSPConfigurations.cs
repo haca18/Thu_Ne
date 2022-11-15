@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.Configurations
 {
-    internal interface ChiTietSPConfigurations : IEntityTypeConfiguration<ChiTietSp>
+    internal class ChiTietSPConfigurations : IEntityTypeConfiguration<ChiTietSp>
     {
         public void Configure(EntityTypeBuilder<ChiTietSp> builder)
         {
@@ -19,14 +19,14 @@ namespace _1.DAL.Configurations
             builder.Property(p => p.SoLuong).HasColumnName("SoLuong").
                 HasColumnType("int").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.DonGiaNhap).HasColumnName("GiaNhap").
-                HasColumnType("double").IsRequired(); // nvarchar(100) not null
+                HasColumnType("float").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.DonGiaBan).HasColumnName("GiaBan").
-                HasColumnType("double").IsRequired(); // nvarchar(100) not null
+                HasColumnType("float").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.TrangThai).HasColumnName("TrangThai").
                HasColumnType("int").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.MoTa).HasColumnName("Mota").
                HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.Mavach).HasColumnName("Mota").
+            builder.Property(p => p.Mavach).HasColumnName("Mavach").
               HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
             builder.Property(k => k.IdDongSP).IsRequired();
             builder.Property(k => k.IdSp).IsRequired();

@@ -32,8 +32,8 @@ namespace _1.DAL.Models
         [StringLength(100)]
         public string? Anh { get; set; }
         
-        public int? IdChucVu { get; set; }
-        public int? IdBc { get; set; }
+        public Guid? IdChucVu { get; set; }
+        public Guid? IdBc { get; set; }
         public virtual ChucVu? ChucVu { get; set; }
         public virtual NhanVien? NhanVien1 { get; set; }
 

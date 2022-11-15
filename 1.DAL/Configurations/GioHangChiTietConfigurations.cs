@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.Configurations
 {
-    internal interface GioHangChiTietConfigurations:IEntityTypeConfiguration<GioHangChiTiet>
+    internal class GioHangChiTietConfigurations :IEntityTypeConfiguration<GioHangChiTiet>
     {
         public void Configure(EntityTypeBuilder<GioHangChiTiet> builder)
         {
@@ -17,11 +17,11 @@ namespace _1.DAL.Configurations
             builder.HasKey(x => x.IdChiTietSp); // Set khóa chính
             builder.HasKey(x => x.IdGioHang); // Set khóa chính
             builder.Property(p => p.DonGia).HasColumnName("DonGia").
-              HasColumnType("double").IsRequired(); // nvarchar(100) not null
+              HasColumnType("float").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.SoLuong).HasColumnName("SoLuong").
                HasColumnType("int").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.DonGiaKhiGiam).HasColumnName("GiamGia").
-               HasColumnType("double").IsRequired(); // nvarchar(100) not null
+               HasColumnType("float").IsRequired(); // nvarchar(100) not null
              // Set khóa ngoại
             builder.HasOne(x => x.ChiTietSp)
            .WithMany().HasForeignKey(p => p.IdChiTietSp);

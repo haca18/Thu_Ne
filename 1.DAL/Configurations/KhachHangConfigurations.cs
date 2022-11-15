@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.Configurations
 {
-    internal interface KhachHangConfigurations : IEntityTypeConfiguration<KhachHang>
+    internal class KhachHangConfigurations : IEntityTypeConfiguration<KhachHang>
     {
         public void Configure(EntityTypeBuilder<KhachHang> builder)
         {
@@ -25,7 +25,7 @@ namespace _1.DAL.Configurations
             builder.Property(p => p.Email).HasColumnName("Email").
               HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.diemTieuDung).HasColumnName("DiemTieuDung").
-              HasColumnType("double").IsRequired(); // nvarchar(100) not null
+              HasColumnType("float").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.SoDienThoai).HasColumnName("SDT").
               HasColumnType("varchar(11)").IsRequired(); // nvarchar(100) not null
             builder.Property(p => p.DiaChi).HasColumnName("DiaChi").

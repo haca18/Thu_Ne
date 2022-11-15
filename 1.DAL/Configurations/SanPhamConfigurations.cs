@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _1.DAL
+namespace _1.DAL.Configurations
 {
-    internal interface SanPhamConfigurations : IEntityTypeConfiguration<SanPham>
+    internal class SanPhamConfigurations : IEntityTypeConfiguration<SanPham>
     {
         public void Configure(EntityTypeBuilder<SanPham> builder)
         {
-            builder.ToTable("Nsx"); // Đặt tên bảng (Nếu ko thì lấy mặc định của class)
+            builder.ToTable("SanPham"); // Đặt tên bảng (Nếu ko thì lấy mặc định của class)
             builder.HasKey(x => x.Id); // Set khóa chính
             // Cấu hình dữ liệu
             builder.Property(p => p.Ten).HasColumnName("Ten").

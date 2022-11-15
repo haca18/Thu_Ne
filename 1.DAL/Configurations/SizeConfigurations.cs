@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.Configurations
 {
-    internal interface SizeConfigurations
+    internal class SizeConfigurations
     {
         public void Configure(EntityTypeBuilder<Size> builder)
         {

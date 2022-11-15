@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.Configurations
 {
-    internal interface SanPhamKhuyenMaiConfigurations : IEntityTypeConfiguration<SanPhamKhuyenMai>
+    internal class SanPhamKhuyenMaiConfigurations : IEntityTypeConfiguration<SanPhamKhuyenMai>
     {
         public void Configure(EntityTypeBuilder<SanPhamKhuyenMai> builder)
         {
