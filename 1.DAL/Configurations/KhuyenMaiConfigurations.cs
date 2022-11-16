@@ -17,19 +17,13 @@ namespace _1.DAL.Configurations
             builder.HasKey(x => x.Id); // Set khóa chính
             // Cấu hình dữ liệu
             builder.Property(p => p.Ten).HasColumnName("Ten").
-                HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.Ma).HasColumnName("Ma").
-                HasColumnType("varchar(30)").IsRequired(); // varchar(30) not null
-            builder.Property(p => p.TrangThai).HasColumnName("TrangThai").
-                HasColumnType("int").IsRequired(); // varchar(100) not null
-            builder.Property(p => p.LoaiGiamGia).HasColumnName("LoaiGiamGia").
-               HasColumnType("nvarchar(30)").IsRequired(); // varchar(100) not null
-            builder.Property(p => p.MucGiamGia).HasColumnName("MucGiamGia").
-               HasColumnType("decimal").IsRequired(); // varchar(100) not null
-            builder.Property(p => p.Start).HasColumnName("Start").
-              HasColumnType("datetime").IsRequired(); // varchar(100) not null
-            builder.Property(p => p.End).HasColumnName("End").
-              HasColumnType("datetime").IsRequired(); // varchar(100) not null
+                HasColumnType("nvarchar(100)"); // nvarchar(100) not null
+            builder.Property(p => p.Ma).HasColumnName("Ma").HasColumnType("varchar(30)"); // varchar(30) not null
+            builder.Property(p => p.TrangThai).HasColumnName("TrangThai").HasColumnType("int"); // varchar(100) not null
+            builder.Property(p => p.LoaiGiamGia).HasColumnName("LoaiGiamGia").HasColumnType("nvarchar(30)"); // varchar(100) not null
+            builder.Property(p => p.MucGiamGia).HasColumnName("MucGiamGia").HasColumnType("decimal"); // varchar(100) not null
+            builder.Property(p => p.Start).HasColumnName("Start").HasColumnType("datetime"); // varchar(100) not null
+            builder.Property(p => p.End).HasColumnName("End").HasColumnType("datetime"); // varchar(100) not null
 
 
         }

@@ -19,6 +19,7 @@ namespace _1.DAL.Models
         public string? Sdt { get; set; }
         public int? TrangThai { get; set; }
         public Guid? IdNV { get; set; }
+        public Guid? IdKH { get; set; }
         public virtual NhanVien? NhanVien { get; set; }
         public virtual KhachHang? KhachHang { get; set; }
 

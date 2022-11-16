@@ -16,24 +16,15 @@ namespace _1.DAL.Configurations
             builder.ToTable("KhacHang"); // Đặt tên bảng (Nếu ko thì lấy mặc định của class)
             builder.HasKey(x => x.Id); // Set khóa chính
             // Cấu hình dữ liệu          
-            builder.Property(p => p.Ma).HasColumnName("Ma").
-                HasColumnType("varchar(30)").IsRequired(); // varchar(30) not null
-            builder.Property(p => p.TrangThai).HasColumnName("TrangThai").
-                HasColumnType("int").IsRequired(); // varchar(100) not null
-            builder.Property(p => p.Ten).HasColumnName("Ten").
-               HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.Email).HasColumnName("Email").
-              HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.diemTieuDung).HasColumnName("DiemTieuDung").
-              HasColumnType("float").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.SoDienThoai).HasColumnName("SDT").
-              HasColumnType("varchar(11)").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.DiaChi).HasColumnName("DiaChi").
-              HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.ThangPho).HasColumnName("ThanhPho").
-              HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.QuocGia).HasColumnName("QuocGia").
-              HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
+            builder.Property(p => p.Ma).HasColumnName("Ma").HasColumnType("varchar(30)"); // varchar(30) not null
+            builder.Property(p => p.TrangThai).HasColumnName("TrangThai").HasColumnType("int"); // varchar(100) not null
+            builder.Property(p => p.Ten).HasColumnName("Ten").HasColumnType("nvarchar(100)"); // nvarchar(100) not null
+            builder.Property(p => p.Email).HasColumnName("Email").HasColumnType("nvarchar(100)"); // nvarchar(100) not null
+            builder.Property(p => p.diemTieuDung).HasColumnName("DiemTieuDung").HasColumnType("float"); // nvarchar(100) not null
+            builder.Property(p => p.SoDienThoai).HasColumnName("SDT").HasColumnType("varchar(11)"); // nvarchar(100) not null
+            builder.Property(p => p.DiaChi).HasColumnName("DiaChi").HasColumnType("nvarchar(100)"); // nvarchar(100) not null
+            builder.Property(p => p.ThangPho).HasColumnName("ThanhPho").HasColumnType("nvarchar(100)"); // nvarchar(100) not null
+            builder.Property(p => p.QuocGia).HasColumnName("QuocGia").HasColumnType("nvarchar(100)"); // nvarchar(100) not null
 
 
         }

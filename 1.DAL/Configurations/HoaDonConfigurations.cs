@@ -14,10 +14,10 @@ namespace _1.DAL.Configurations
         public void Configure(EntityTypeBuilder<HoaDon> builder)
         {
             builder.ToTable("HoaDon"); // Đặt tên bảng (Nếu ko thì lấy mặc định của class)
-            builder.HasKey(x => x.IdhoaDon); // Set khóa chính
+            builder.HasKey(x => x.Id); // Set khóa chính
             // Cấu hình dữ liệu           
             builder.Property(p => p.MaHoaDon).HasColumnName("Ma").
-                HasColumnType("varchar(30)").IsRequired(); // varchar(30) not null
+                HasColumnType("varchar(30)"); // varchar(30) not null
             builder.Property(p => p.TrangThai).HasColumnName("TrangThai").
                 HasColumnType("int"); // varchar(100) not null
             builder.Property(p => p.NgayLap).HasColumnName("NgayLap").
@@ -32,7 +32,7 @@ namespace _1.DAL.Configurations
                 HasColumnType("nvarchar(20)"); // varchar(100) not null
             builder.Property(p => p.Sdt).HasColumnName("SdtKhach").
                 HasColumnType("varchar(10)"); // varchar(100) not null
-            builder.Property(k => k.IdNhanVien).IsRequired();
+            builder.Property(k => k.IdNhanVien);
             //khoa phu
             builder.HasOne(x => x.KhachHang)
             .WithMany().HasForeignKey(p => p.IdKhachHang);

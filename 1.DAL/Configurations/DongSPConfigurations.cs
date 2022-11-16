@@ -17,11 +17,9 @@ namespace _1.DAL.Configurations
             builder.HasKey(x => x.Id); // Set khóa chính
             // Cấu hình dữ liệu
             builder.Property(p => p.Ten).HasColumnName("Ten").
-                HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.Ma).HasColumnName("Ma").
-                HasColumnType("varchar(30)").IsRequired(); // varchar(30) not null
-            builder.Property(p => p.TrangThai).HasColumnName("TrangThai").
-                HasColumnType("int").IsRequired(); // varchar(100) not null
+                HasColumnType("nvarchar(100)"); // nvarchar(100) not null
+            builder.Property(p => p.Ma).HasColumnName("Ma").HasColumnType("varchar(30)"); // varchar(30) not null
+            builder.Property(p => p.TrangThai).HasColumnName("TrangThai").HasColumnType("int"); // varchar(100) not null
 
 
         }

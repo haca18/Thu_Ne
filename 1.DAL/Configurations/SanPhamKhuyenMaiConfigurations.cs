@@ -16,10 +16,10 @@ namespace _1.DAL.Configurations
             builder.ToTable("SanPhamKhuyenMai"); // Đặt tên bảng (Nếu ko thì lấy mặc định của class)
             builder.HasKey(x => x.Id); // Set khóa chính
             // Cấu hình dữ liệu
-            builder.Property(k => k.IdKhuyenMai).IsRequired();
-            builder.Property(k => k.IdSanPham).IsRequired();
+            builder.Property(k => k.IdKhuyenMai);
+            builder.Property(k => k.IdSanPham);
             builder.Property(p => p.TrangThai).HasColumnName("TrangThai").
-                HasColumnType("int").IsRequired(); // varchar(100) not null
+                HasColumnType("int"); // varchar(100) not null
             // Set khóa ngoại
              builder.HasOne(x => x.KhuyenMai)
             .WithMany().HasForeignKey(p => p.IdKhuyenMai);

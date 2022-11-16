@@ -10,9 +10,10 @@ namespace _1.DAL.Models
 {
     public class HoaDonChiTiet
     {
-        public Guid IdhoaDonChiTiet { get; set; }
-        [StringLength(50)]
-        public string? MaHoaDonChiTiet { get; set; }
+        public Guid Id { get; set; }
+       
+       
+       
         public double? DonGia { get; set; }
         public int? SoLuong { get; set; }
         public double? GiamGia { get; set; }
@@ -20,7 +21,7 @@ namespace _1.DAL.Models
         public Guid? IdhoaDon { get; set; }
         public int? TrangThai { get; set; }      
         public Guid? IdChiTIetSp { get; set; }
-        [StringLength(100)]
+       
         public string GhiChu { get; set; }
         public virtual ChiTietSp? ChiTietSp { get; set; }
         public virtual HoaDon? HoaDon { get; set; }

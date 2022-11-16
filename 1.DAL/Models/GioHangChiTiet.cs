@@ -9,8 +9,8 @@ namespace _1.DAL.Models
 {
     public class GioHangChiTiet
     {
+        public Guid? ID { get; set; }
         public Guid? IdChiTietSp { get; set; }
-        [StringLength(50)]
         public int? SoLuong { get; set; }
         public decimal? DonGia { get; set; }
         public decimal? DonGiaKhiGiam { get; set; }

@@ -10,7 +10,7 @@ namespace _1.DAL.Models
 {
     public class HoaDon
     {
-        public Guid? IdhoaDon { get; set; }
+        public Guid? Id { get; set; }
         [StringLength(50)]
         public string MaHoaDon { get; set; }
        

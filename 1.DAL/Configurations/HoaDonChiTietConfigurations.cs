@@ -14,25 +14,19 @@ namespace _1.DAL.Configurations
         public void Configure(EntityTypeBuilder<HoaDonChiTiet> builder)
         {
             builder.ToTable("HoaDonChiTiet"); // Đặt tên bảng (Nếu ko thì lấy mặc định của class)
-            builder.HasKey(x => x.IdhoaDonChiTiet); // Set khóa chính
-            builder.HasKey(x => x.IdChiTIetSp); // Set khóa chính
+            builder.HasKey(x => x.Id); // Set khóa chính
+
             // Cấu hình dữ liệu
             builder.Property(k => k.IdhoaDon).IsRequired();
             builder.Property(k => k.IdChiTIetSp).IsRequired();
+
             builder.Property(p => p.TrangThai).HasColumnName("TrangThai").
-                HasColumnType("int").IsRequired(); // varchar(100) not null
-            builder.Property(p => p.MaHoaDonChiTiet).HasColumnName("MaHoaDon").
-               HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.DonGia).HasColumnName("DonGia").
-               HasColumnType("float").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.SoLuong).HasColumnName("SoLuong").
-               HasColumnType("int").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.GiamGia).HasColumnName("GiamGia").
-               HasColumnType("float").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.ThanhTien).HasColumnName("ThanhTien").
-               HasColumnType("float").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.GhiChu).HasColumnName("ChiChu").
-               HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
+                HasColumnType("int"); // varchar(100) not nul
+            builder.Property(p => p.DonGia).HasColumnName("DonGia").HasColumnType("float"); // nvarchar(100) not null
+            builder.Property(p => p.SoLuong).HasColumnName("SoLuong").HasColumnType("int"); // nvarchar(100) not null
+            builder.Property(p => p.GiamGia).HasColumnName("GiamGia").HasColumnType("float"); // nvarchar(100) not null
+            builder.Property(p => p.ThanhTien).HasColumnName("ThanhTien").HasColumnType("float"); // nvarchar(100) not null
+            builder.Property(p => p.GhiChu).HasColumnName("ChiChu").HasColumnType("nvarchar(100)"); // nvarchar(100) not null
             // Set khóa ngoại
             builder.HasOne(x => x.HoaDon)
            .WithMany().HasForeignKey(p => p.IdhoaDon);

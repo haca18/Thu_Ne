@@ -14,15 +14,14 @@ namespace _1.DAL.Configurations
         public void Configure(EntityTypeBuilder<GioHangChiTiet> builder)
         {
             builder.ToTable("GioHangChiTiet"); // Đặt tên bảng (Nếu ko thì lấy mặc định của class)
-            builder.HasKey(x => x.IdChiTietSp); // Set khóa chính
-            builder.HasKey(x => x.IdGioHang); // Set khóa chính
-            builder.Property(p => p.DonGia).HasColumnName("DonGia").
-              HasColumnType("float").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.SoLuong).HasColumnName("SoLuong").
-               HasColumnType("int").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.DonGiaKhiGiam).HasColumnName("GiamGia").
-               HasColumnType("float").IsRequired(); // nvarchar(100) not null
-             // Set khóa ngoại
+            builder.HasKey(x => x.ID); // Set khóa chính
+            
+            builder.Property(p => p.DonGia).HasColumnName("DonGia").HasColumnType("float"); // nvarchar(100) not null
+            builder.Property(p => p.SoLuong).HasColumnName("SoLuong").HasColumnType("int"); // nvarchar(100) not null
+            builder.Property(p => p.DonGiaKhiGiam).HasColumnName("GiamGia").HasColumnType("float"); // nvarchar(100) not null
+                                                                                                    // Set khóa ngoại
+            builder.Property(k => k.IdGioHang).IsRequired();
+            builder.Property(k => k.IdChiTietSp).IsRequired();
             builder.HasOne(x => x.ChiTietSp)
            .WithMany().HasForeignKey(p => p.IdChiTietSp);
             builder.HasOne(x => x.GioHang)

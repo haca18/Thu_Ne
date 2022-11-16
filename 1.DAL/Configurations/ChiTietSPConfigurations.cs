@@ -17,23 +17,18 @@ namespace _1.DAL.Configurations
             builder.HasKey(x => x.Id); // Set khóa chính
             // Cấu hình dữ liệu
             builder.Property(p => p.SoLuong).HasColumnName("SoLuong").
-                HasColumnType("int").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.DonGiaNhap).HasColumnName("GiaNhap").
-                HasColumnType("float").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.DonGiaBan).HasColumnName("GiaBan").
-                HasColumnType("float").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.TrangThai).HasColumnName("TrangThai").
-               HasColumnType("int").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.MoTa).HasColumnName("Mota").
-               HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
-            builder.Property(p => p.Mavach).HasColumnName("Mavach").
-              HasColumnType("nvarchar(100)").IsRequired(); // nvarchar(100) not null
-            builder.Property(k => k.IdDongSP).IsRequired();
-            builder.Property(k => k.IdSp).IsRequired();
-            builder.Property(k => k.IdNsx).IsRequired();
-            builder.Property(k => k.IdchatLieu).IsRequired();
-            builder.Property(k => k.IdSize).IsRequired();
-            builder.Property(k => k.IdMauSac).IsRequired();
+                HasColumnType("int"); // nvarchar(100) not null
+            builder.Property(p => p.DonGiaNhap).HasColumnName("GiaNhap").HasColumnType("float"); // nvarchar(100) not null
+            builder.Property(p => p.DonGiaBan).HasColumnName("GiaBan").HasColumnType("float"); // nvarchar(100) not null
+            builder.Property(p => p.TrangThai).HasColumnName("TrangThai").HasColumnType("int"); // nvarchar(100) not null
+            builder.Property(p => p.MoTa).HasColumnName("Mota").HasColumnType("nvarchar(100)"); // nvarchar(100) not null
+            builder.Property(p => p.Mavach).HasColumnName("Mavach").HasColumnType("nvarchar(100)"); // nvarchar(100) not null
+            builder.Property(k => k.IdDongSP);
+            builder.Property(k => k.IdSp);
+            builder.Property(k => k.IdNsx);
+            builder.Property(k => k.IdchatLieu);
+            builder.Property(k => k.IdSize);
+            builder.Property(k => k.IdMauSac);
             //set khoa phu
             builder.HasOne(x => x.NSX)
             .WithMany().HasForeignKey(p => p.IdNsx);
