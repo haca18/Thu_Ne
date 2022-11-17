@@ -36,5 +36,21 @@ namespace _1.DAL.Context
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             // Phương thức này sẽ áp dụng tất cả các config hiện có
         }
+        public DbSet<ChatLieu> ChatLieus { get; set; }
+        public DbSet<ChiTietSp> ChiTietSps{ get; set; }
+        public DbSet<ChucVu> ChucVus { get; set; }
+        public DbSet<DongSP> DongSPs { get; set; }
+        public DbSet<GioHang> GioHangs { get; set; }
+        public DbSet<GioHangChiTiet> GioHangChiTiets { get; set; }
+        public DbSet<HoaDon> HoaDons { get; set; }
+        public DbSet<HoaDonChiTiet> HoaDonChiTiets{ get; set; }
+        public DbSet<MauSac> MauSacs{ get; set; }
+        public DbSet<KhachHang> KhachHangs { get; set; }
+        public DbSet<KhuyenMai> khuyenMais  { get; set; }
+        public DbSet<NhanVien>NhanViens { get; set; }
+        public DbSet<NSX> NSXes { get; set; }
+        public DbSet<SanPham> SanPhams { get; set; }
+        public DbSet<SanPhamKhuyenMai> sanPhamKhuyenMais { get; set; }
+        public DbSet<Size> Sizes { get; set; }
     }
 }
