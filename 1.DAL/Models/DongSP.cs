@@ -10,9 +10,9 @@ namespace _1.DAL.Models
     public class DongSP
     {
         public Guid? Id { get; set; }
-        [StringLength(50)]
+        
         public string? Ma { get; set; }
-        [StringLength(50)]
+        
         public string? Ten { get; set; }
         [Required]
         [StringLength(100)]
