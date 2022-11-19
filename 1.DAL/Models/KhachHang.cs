@@ -28,7 +28,6 @@ namespace _1.DAL.Models
         public bool? TrangThai { get; set; }
        
         public double? diemTieuDung { get; set; }
-       //ss
-
+      
     }
 }
