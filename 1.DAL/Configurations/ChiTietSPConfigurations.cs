@@ -23,6 +23,7 @@ namespace _1.DAL.Configurations
             builder.Property(p => p.TrangThai).HasColumnName("TrangThai").HasColumnType("int"); // nvarchar(100) not null
             builder.Property(p => p.MoTa).HasColumnName("Mota").HasColumnType("nvarchar(100)"); // nvarchar(100) not null
             builder.Property(p => p.Mavach).HasColumnName("Mavach").HasColumnType("nvarchar(100)"); // nvarchar(100) not null
+            builder.Property(p => p.Ma).HasColumnName("Ma").HasColumnType("varchar(10)"); // nvarchar(100) not null
             builder.Property(k => k.IdDongSP);
             builder.Property(k => k.IdSp);
             builder.Property(k => k.IdNsx);

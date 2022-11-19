@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace _3.PL.ViewModel
 {
-    internal class GioHangChiTIetView
+    public class GioHangChiTIetView
     {
+        public Guid? ID { get; set; }
+        public Guid? IdChiTietSp { get; set; }
+        public int? SoLuong { get; set; }
+        public decimal? DonGia { get; set; }
+        public decimal? DonGiaKhiGiam { get; set; }
+        public Guid? IdGioHang { get; set; }
     }
 }

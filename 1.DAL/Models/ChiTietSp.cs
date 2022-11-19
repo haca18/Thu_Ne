@@ -15,6 +15,7 @@ namespace _1.DAL.Models
         public int? SoLuong { get; set; }
         [StringLength(50)]
         public string? Mavach { get; set; }
+        public string? Ma { get; set; }
         public double? DonGiaNhap { get; set; }
         public double? DonGiaBan { get; set; }         
         public int? TrangThai { get; set; }

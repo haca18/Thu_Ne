@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _1.DAL.Migrations
 {
-    public partial class testrrr : Migration
+    public partial class sos : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,8 +40,8 @@ namespace _1.DAL.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Ma = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true),
-                    Ten = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    Ma = table.Column<string>(type: "varchar(30)", nullable: true),
+                    Ten = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     TrangThai = table.Column<int>(type: "int", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
@@ -130,7 +130,7 @@ namespace _1.DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Size",
+                name: "Sizes",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -140,7 +140,7 @@ namespace _1.DAL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Size", x => x.Id);
+                    table.PrimaryKey("PK_Sizes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -212,6 +212,7 @@ namespace _1.DAL.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     SoLuong = table.Column<int>(type: "int", maxLength: 50, nullable: true),
                     Mavach = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    Ma = table.Column<string>(type: "varchar(10)", nullable: true),
                     GiaNhap = table.Column<double>(type: "float", nullable: true),
                     GiaBan = table.Column<double>(type: "float", nullable: true),
                     TrangThai = table.Column<int>(type: "int", nullable: true),
@@ -257,9 +258,9 @@ namespace _1.DAL.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_ChiTietSP_Size_IdSize",
+                        name: "FK_ChiTietSP_Sizes_IdSize",
                         column: x => x.IdSize,
-                        principalTable: "Size",
+                        principalTable: "Sizes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -517,7 +518,7 @@ namespace _1.DAL.Migrations
                 name: "SanPham");
 
             migrationBuilder.DropTable(
-                name: "Size");
+                name: "Sizes");
 
             migrationBuilder.DropTable(
                 name: "KhacHang");

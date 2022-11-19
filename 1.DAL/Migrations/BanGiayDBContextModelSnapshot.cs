@@ -78,6 +78,10 @@ namespace _1.DAL.Migrations
                     b.Property<Guid?>("IdchatLieu")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Ma")
+                        .HasColumnType("varchar(10)")
+                        .HasColumnName("Ma");
+
                     b.Property<string>("Mavach")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
@@ -147,13 +151,11 @@ namespace _1.DAL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Ma")
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)")
+                        .HasColumnType("varchar(30)")
                         .HasColumnName("Ma");
 
                     b.Property<string>("Ten")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
+                        .HasColumnType("nvarchar(100)")
                         .HasColumnName("Ten");
 
                     b.Property<int?>("TrangThai")
@@ -649,7 +651,7 @@ namespace _1.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Size");
+                    b.ToTable("Sizes");
                 });
 
             modelBuilder.Entity("_1.DAL.Models.ChiTietSp", b =>
