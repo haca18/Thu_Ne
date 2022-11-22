@@ -19,6 +19,7 @@ namespace _1.DAL.Repositories
         public bool Add(ChucVu obj)
         {
             if (obj == null) return false;
+            obj.Id= Guid.NewGuid();
             _dbContext.ChucVus.Add(obj);
             _dbContext.SaveChanges();
             return true;

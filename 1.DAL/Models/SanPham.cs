@@ -9,13 +9,13 @@ namespace _1.DAL.Models
 {
     public class SanPham
     {
-        public Guid? Id { get; set; }
+        public Guid Id { get; set; }
         [StringLength(50)]
-        public string? Ma { get; set; }
+        public string Ma { get; set; }
         [StringLength(50)]
-        public string? Ten { get; set; }
+        public string Ten { get; set; }
         [Required]
         [StringLength(100)]
-        public int? TrangThai { get; set; }
+        public int TrangThai { get; set; }
     }
 }

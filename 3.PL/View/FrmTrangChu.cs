@@ -50,7 +50,7 @@ namespace _3.PL
         {
             lb_TrangChu.Text = "Sản Phẩm";
             this.pnlFromLoad.Controls.Clear();
-            FrmSanPham frmSanPham = new FrmSanPham(){Dock = DockStyle.Fill,TopLevel = false,TopMost = true};
+            Frm_ChiTietSanPham frmSanPham = new Frm_ChiTietSanPham(){Dock = DockStyle.Fill,TopLevel = false,TopMost = true};
             this.pnlFromLoad.Controls.Add(frmSanPham);
             frmSanPham.Show();
 

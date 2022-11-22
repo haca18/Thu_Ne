@@ -25,9 +25,9 @@ namespace _1.DAL.Models
         public string QuocGia { get; set; }
         [StringLength(50)]
         public string SoDienThoai { get; set; }
-        public bool? TrangThai { get; set; }
+        public int TrangThai { get; set; }
        
-        public double? diemTieuDung { get; set; }
+        public double diemTieuDung { get; set; }
       
     }
 }

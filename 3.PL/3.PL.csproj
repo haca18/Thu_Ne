@@ -9,11 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\2.BUS\2.BUS.csproj" />
+    <PackageReference Include="QRCoder" Version="1.3.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="View\" />
+    <ProjectReference Include="..\2.BUS\2.BUS.csproj" />
   </ItemGroup>
 
 </Project>

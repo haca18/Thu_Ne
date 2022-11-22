@@ -26,6 +26,7 @@ namespace _1.DAL.Configurations
             builder.Property(p => p.SoCmnd).HasColumnName("SoCmnd").HasColumnType("nvarchar(100)"); // nvarchar(100) not null
             builder.Property(p => p.DienThoai).HasColumnName("DienThoai").HasColumnType("varchar(11)"); // nvarchar(100) not null
             builder.Property(p => p.PassWord).HasColumnName("Pass").HasColumnType("varchar(11)"); // nvarchar(100) not null
+            builder.Property(p => p.NamSinh).HasColumnName("NamSinh").HasColumnType("datetime"); // nvarchar(100) not null
             builder.HasOne(x => x.NhanVien1)
           .WithMany().HasForeignKey(p => p.IdBc);
             builder.HasOne(x => x.ChucVu)
